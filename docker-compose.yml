@@ -1,0 +1,20 @@
+version: "3"
+services:
+  node:
+    image: node:9.6.0
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./node/:/node/
+    working_dir: /node
+    links:
+     - mongo
+    tty: true
+     
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongodb/:/data/db
