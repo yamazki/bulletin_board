@@ -5,7 +5,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./node/:/node/
+      - ./node/:/node/:z
     working_dir: /node
     command: npm start
     links:
@@ -17,4 +17,4 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - ./mongodb/:/data/db
+      - ./mongodb/:/data/db:z

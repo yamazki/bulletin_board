@@ -1,15 +1,22 @@
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
-<div id="app-6">
+<div id="app">
   <p>{{ message }}</p>
+  <p>{{ data }}</p>
   <input v-model="message">
+  <br>
+  <input v-model="data">
 </div>
 
 <script>
-  var app6 = new Vue({
-    el: '#app-6',
+  let app = new Vue({
+    el: '#app',
     data: {
-      message: 'Hello Vue!'
+      message: 'Hello Vue!',
+      data: 'Hello Vue!'
+    },
+    created: function () {
+      console.log(this.message)
     }
   })
 </script>
