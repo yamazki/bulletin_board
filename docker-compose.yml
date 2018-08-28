@@ -7,9 +7,9 @@ services:
     volumes:
       - ./node/:/node/
     working_dir: /node
+    command: npm start
     links:
-     - mongo
-    tty: true
+      - mongo
      
   mongo:
     container_name: mongo
